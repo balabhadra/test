@@ -41,6 +41,32 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1.3'
 end
 
-# Use pry debugging
-gem 'pry-rails', group: [:development, :test]
+
+group :development, :test do
+  # Use pry debugging
+  gem 'pry-rails'
+
+  # Rspec for testing
+  gem 'rspec-rails', '~> 2.0'
+
+  #Fixture replacement. Feeds test data to the test suite
+  gem 'factory_girl_rails', '~> 4.0'
+end
+
+group :test do
+  # Generates name, email and other placeholders for factories
+  gem 'faker'
+
+  # Simulates user interaction with the web application
+  gem 'capybara'
+
+  # Makes sure each spec run with a clean database. Clears database after running each spec
+  gem 'database_cleaner'
+
+  # Opens default web browser on demand to show what the application is rendering
+  gem 'launchy'
+
+  # Lets us test js based browser interactions with capybara
+  gem 'selenium-webdriver'
+end
 
