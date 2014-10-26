@@ -47,7 +47,7 @@ group :development, :test do
   gem 'pry-rails'
 
   # Rspec for testing
-  gem 'rspec-rails', '~> 2.0'
+  gem 'rspec-rails', '~> 3.0.0'
 
   #Fixture replacement. Feeds test data to the test suite
   gem 'factory_girl_rails', '~> 4.0'
@@ -58,15 +58,18 @@ group :test do
   gem 'faker'
 
   # Simulates user interaction with the web application
-  gem 'capybara'
+  #gem 'capybara'
 
   # Makes sure each spec run with a clean database. Clears database after running each spec
   gem 'database_cleaner'
 
   # Opens default web browser on demand to show what the application is rendering
-  gem 'launchy'
+  #gem 'launchy'
 
   # Lets us test js based browser interactions with capybara
-  gem 'selenium-webdriver'
+  #gem 'selenium-webdriver'
+
+  # Lets us use matchers
+  gem 'shoulda-matchers'
 end
 
